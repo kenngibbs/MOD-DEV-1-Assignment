@@ -2,46 +2,28 @@
 
 <cfoutput>
     <!--- After some research isDefine doesn't work very well with sessions. structKeyExists is the perferred way to check for information. --->
-    <cfif structKeyExists(#Session,email_for_mod#)>
-    <!--- <cfif true> --->
+    <cfif structKeyExists(Session,"email_for_mod")>
         <html>
             <head>
                 <title>MOD DEV 1 Assignment</title>
-                <link>
+                <link rel="stylesheet" type="text/css" href="mod_dev_1.css">
             </head>
-            <body>
-                <header>
-                    <cfoutput>
-                        <h1>Welcome #Session.email_for_mod#</h1>
-                    </cfoutput>
-                </header>
-        
+            <body class="container_home">
                 <div>
-                    <a href="index.cfm">Log Out</a>
+                    <header>
+                            <h1>Welcome #Session.email_for_mod#</h1>
+                    </header>
+            
+                    <div>
+                        <a href="logout_user.cfm">Log Out</a>
+                    </div>
                 </div>
-        
             </body>
         </html>
+
+    <!--- If the user is not signed in, send them back to the home page. --->
     <cfelse>
-        <cflocation url = "/">
+        <cflocation url = "/" addtoken="no">
     </cfif>
 </cfoutput>
 </cflock>
-<!--- <html>
-    <head>
-        <title>MOD DEV 1 Assignment</title>
-        <link>
-    </head>
-    <body>
-        <header>
-            <cfoutput>
-                <h1>Welcome #Session.email_for_mod#</h1>
-            </cfoutput>
-        </header>
-
-        <div>
-            <a href="index.cfm">Log Out</a>
-        </div>
-
-    </body>
-</html> --->

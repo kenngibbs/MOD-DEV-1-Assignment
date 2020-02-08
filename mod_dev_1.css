@@ -1,0 +1,66 @@
+
+/* Gold: rgb(187, 159, 0); */
+/* Gray-ish: rgb(113, 132, 147); */
+/* Dark Navy: rgb(31, 39, 52); */
+
+body{
+    background-color: rgb(31, 39, 52);
+}
+
+header{
+    color: rgb(187, 159, 0);
+    font-size: 1.25em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-items: center;
+    /* padding-top: 20%; */
+}
+
+.container_home{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    justify-items: center;
+    padding-top: 10%;
+    text-align: center;
+}
+
+#login_form div label{
+    display: block;
+    color: white;
+    font-size: 1.5em;
+}
+
+#login_form div input{
+    width: 100%;
+    line-height: 2em;
+    font-size: 1.25em;
+    margin-bottom: 5%;
+    border-radius: 15px;
+}
+
+#login_form div button{
+    background-color: rgb(187, 159, 0);
+    color: white;
+    font-size: 1em;
+    line-height: 3em;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+#error_message{
+    color: red;
+    font-size: 1em;
+}
+
+a[href="logout_user.cfm"]{
+    font-size: 1.5em;
+    color: white;
+}
+
